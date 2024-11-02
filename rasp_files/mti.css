@@ -1,0 +1,235 @@
+body {
+    background: #f8f7f6;
+    color: #2b2b2b;
+}
+
+.icon i {
+    width: 800px;
+    height: 250px;
+    background: url(../img/icons-mti.png?v2) no-repeat 0 0;
+}
+
+#top-menu {
+    background-color: rgba(248, 247, 246, 0);
+}
+
+#top-menu .active .icon i {
+    top: -224px;
+}
+#top-menu ul {
+    margin-left: -1px;
+    background: #f8f7f6;
+    border-right: 1px solid #b0b0b0;
+    border-bottom: 1px solid #b0b0b0;
+    border-left: 1px solid #b0b0b0;
+}
+#top-menu .item {
+    border: 1px solid #f8f7f6;
+}
+#top-menu .item.is-submenu:hover {
+    background: #f8f7f6;
+    border: 1px solid #b0b0b0;
+}
+
+#top-menu a:hover {
+    background-color: #f0f0f0;
+}
+#top-menu .active a {
+    color: #b0b0b0;
+    background-color: rgba(248, 247, 246, 0);
+}
+
+#user-notice .item {
+    color: #2b2b2b;
+    background-color: rgba(248, 247, 246, 0);
+}
+
+#user-menu .icon i,
+#user-menu li .icon i,
+#user-menu ul li:hover .icon i,
+#user-notice .item .icon i,
+#user-notice .item:hover .icon i,
+#top-menu .item.is-submenu .icon-down i,
+#top-menu .icon i {
+    top: -204px;
+}
+
+.drop-menu-label,
+#top-menu a {
+    color: #2b2b2b;
+}
+
+#user-menu li a:hover,
+#user-lang li:hover,
+#user-lang li:hover a,
+#user-notice .item:hover {
+    color: #2b2b2b;
+    background-color: #f0f0f0;
+}
+
+#user-menu,
+#user-lang {
+    margin-top: 12px;
+}
+
+#curators {
+    width: 40% !important;
+    margin-right: 29% !important;
+    font-family: "Mabry Pro Light";
+    font-size: 15px;
+    color: #30313A;
+}
+#curators a, #curators a:hover {
+    color: #5384E3;
+}
+.curatorPanelBlockAvatar {
+    padding-right: 12px;
+    width: 70px;
+}
+.curatorTitle, .curatorName {
+    padding-left: 0 !important;
+}
+#curators .icon-down i {
+    top: -60px;
+}
+#page {
+    padding-bottom: 210px;
+}
+body.is-guest #page {
+    padding-bottom: 150px;
+}
+
+#footer {
+    color: #F8F7F6;
+    background-color: #30313A;
+    height: 180px;
+}
+body.is-guest #footer {
+    height: 120px;
+}
+
+#bottom-menu a {
+    color: #ffffff;
+}
+
+#contacts a,
+#copyright a {
+    color: #5384E3;
+}
+#contacts b {
+    padding-top: 8px;
+    font-size: 22px;
+}
+#contacts .phones {
+    float: left;
+}
+#contacts .apps {
+    clear: both;
+}
+#contacts .phones,
+#contacts .apps .android {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #F8F7F6;
+}
+#contacts b,
+#contacts .apps .iphone {
+    display: block;
+    float: left;
+    min-width: 216px;
+}
+
+h1, h2, h3, h4, h5, h6,
+#user-greeting {
+    color: #555555;
+}
+
+.login-form {
+    padding: 30px 70px 40px;
+    width: 316px;
+    background-color: #30313A;
+}
+.login-form h1,
+.login-form .input,
+.login-form a,
+.login-form .button {
+    color: #F8F7F6;
+    font-family: "Mabry Pro Light";
+    font-size: 16px;
+    letter-spacing: .03em;
+
+}
+.login-form h1 {
+    margin-bottom: 0;
+    font-size: 26px;
+}
+.login-form .input {
+    color: #7B7B7B;
+    background-color: #F8F7F6;
+    border: 0;
+    border-radius: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 6px;
+}
+.login-form a {
+    text-decoration: none;
+}
+.login-form .button {
+    padding: 4px 0 0;
+    color: #ffffff;
+    background-color: #5384E3;
+    font-weight: 600;
+    border-radius: 6px;
+}
+.login-form .button .icon-login {
+    margin-left: -4px;
+}
+.login-form #demo {
+    margin-left: -40px;
+}
+
+#popupLoginBtn .icon i {
+    top: 0px;
+}
+
+.mti-docs {
+    padding: 10px 0;
+}
+
+/* curator */
+
+.newPopup.rateCurator .popupBody {
+    padding: 10px 40px 20px 40px;
+    background-color: #F8F7F6;
+    border-radius: 12px;
+    font-family: "Mabry Pro Light";
+}
+.newPopup.rateCurator .popupBody h2,
+.newPopup.rateCurator .popupBody h3 {
+    color: #30313A;
+    font-size: 100%;
+    font-family: "Mabry Pro";
+}
+.newPopup.rateCurator .popupBody h3 {
+    margin: 0 0 10px;
+}
+.newPopup.rateCurator .popupBody label {
+    margin-left: 6px;
+}
+.newPopup.rateCurator .popupBody textarea {
+    margin-top: -8px;
+    margin-bottom: 10px;
+}
+.newPopup.rateCurator .popupBody button {
+     background-color: #5384E3;
+     color: #F8F7F6;
+    border-radius: 15px;
+}
+.newPopup.rateCurator .popupT,
+.newPopup.rateCurator .popupB {
+    display: none;
+}
+.rateCurator .rateCuratorMain p {
+    font-size: 100% !important;
+}

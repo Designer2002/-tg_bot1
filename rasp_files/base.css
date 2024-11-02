@@ -1,0 +1,79 @@
+/*ol,ul{list-style:none;}*/
+blockquote,q{quotes:none;}
+
+.br {height:20px;font-size:20px;}
+
+input[type=text]::-ms-clear {  /* disable CLEAR button for IE 10 */
+	display: none;
+}
+
+.redColor {color:#ED1C3F !important;}
+
+div.grayLine {font-size:2px;height:2px;background: #ebe8e5;margin:5px 0; }
+.grayBorder {border: 1px solid #D4D3D2;}
+
+.lowercase {text-transform:lowercase;}
+.capitalize {text-transform: capitalize;}
+.breakWord {word-wrap: break-word;}
+.lPos {text-align:left;}
+.rPos {text-align:right;}
+.cPos {text-align:center;}
+.vMiddle {vertical-align:middle !important;}
+.vBottom {vertical-align:bottom !important;}
+.vTop {vertical-align: top !important;}
+.lFloat {float:left !important;}
+.rFloat {float:right !important;}
+.vTextBottom {vertical-align:text-bottom;}
+
+.centerAlign {text-align: center;}
+
+ul.ul, div.text ul, div.textarea ul/*, ul*/ {list-style-type:disc;margin:0 0 10px 15px;}
+ol.ol, div.text ol, div.textarea ol/*, ol*/ {list-style-type:decimal;margin:0 0 10px 25px;}
+div.right ul {margin-left: 0;}
+div.right ol {margin-left: 0;}
+.newLine {margin-top:10px !important;}
+
+.minHeight {min-height: 280px;}
+.minHeight * {line-height: 280px !important;}
+
+.blackBox {background:#343434;position: relative;z-index: 310 !important;}
+.grayVideoBox {background: none repeat scroll 0 0 #F5F5F4; border-color: #D4D3D2; border-style: solid; border-width: 1px;}
+
+
+.hiddenSubmit { width:1px !important; height:1px !important; border:0 !important; background: none !important; font-size:1px !important; position: absolute !important; margin-left: -9999px !important; }
+.hiddenAutocompleterInput { width:1px; height:1px; border:0; background: none; font-size:1px; position: absolute; margin-left: -9999px; }
+
+ol.lowerAlpha {list-style-type: lower-alpha !important;}
+ol.lowerRoman {list-style-type: lower-roman !important;}
+
+/*COLOR*/
+.colorGreen {color:#0e854e !important;}
+.colorRed {color:#d71939 !important;}
+.colorGray {color:#8a8a84 !important;}
+.colorBlack {color:black !important;}
+/*END COLOR*/
+
+/*TITLE*/
+/*h3.title {
+	color:#888080 !important;
+	font-size:11px !important;
+	font-weight:bold !important;
+}
+
+h1.title {
+	color:#1e1e1e  !important;
+	font-size:24px  !important;
+	font-weight:bold  !important;
+	margin:0 0 18px 0 !important;
+}*/
+/*END TITLE*/
+
+.displayBlock {display:block !important;}
+.inlineBlock {display:inline-block !important;}
+.lineThrough {text-decoration: line-through;}
+
+.pad10 {padding: 10px;}
+.pad15 {padding: 15px;}
+.padlabelright{
+	padding-right:8px;
+}

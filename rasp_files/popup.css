@@ -1,0 +1,592 @@
+.popupBody div.largeWithFieldMessage {margin:-16px 0 5px 0;}
+
+#popupCloseBtn {text-decoration:none;display:inline-block;height:14px;position:absolute;right:50px;}
+#popupCloseBtn img {vertical-align:middle;}
+#popupCloseBtn label {color:#888080;font-weight:bold;font-size:11px;margin-right:5px;vertical-align:middle;cursor:pointer;visibility:hidden;
+	margin-bottom:0 !important}
+#popupCloseBtn:hover label {visibility:visible;}
+
+div#bgshadow,div.bgshadow {background: rgba(0,0,0,0.5); width:100%;height:100%;position:fixed;left:0px;top:0px; z-index:1150;display:none;}
+div#bgshadow_learning {background: #000000; opacity: 0.5; width:100%;height:100%;position:fixed;left:0px;top:0px; z-index:1150;display:none;}
+div.bgshadowajaxloader {background: #ffffff; opacity: 0.85; width:100%;height:100%;position:fixed;left:0px;top:0px; z-index:1150;display:none;}
+span.ajaxLoaderTitle {font-size:20px; color:#4A4947; font-size:11px; font-weight:bold;
+		margin-left:10px;line-height:33px;display:inline-block;}
+
+div.popupBody {padding:10px 52px;}
+div.popupBody #popupCloseBtn {margin-right:-23px;}
+div.popupBody .delimerHx {height:15px;}
+/*div.popupBody div.popupCrop {overflow:hidden;}*/
+div.newPopup {width:585px;}
+div.newPopup div.popupT {background: url('/img/corner/popup.png') no-repeat 0 0;height:9px; overflow:hidden;}
+div.newPopup div.popupT div {background: url('/img/corner/popup.png') no-repeat right 0;height:9px;padding-left:9px;}
+div.newPopup div.popupT div div {background: #ffffff;height:9px;margin-right:9px}
+div.newPopup div.popupB {background: url('/img/corner/popup.png') no-repeat 0 -9px;height:10px; overflow:hidden;}
+div.newPopup div.popupB div {background: url('/img/corner/popup.png') no-repeat right -9px;height:10px;padding-left:9px;}
+div.newPopup div.popupB div div {background: #ffffff;height:10px;margin-right:9px}
+div.newPopup div.popupBody  {background: #ffffff;padding:10px 52px;}
+div.newPopup .rPos {position:relative;}
+div.newPopup .rPos div.loaderSmall {margin:-24px -32px 0 0;}
+div.popupBody p.bigText {font-size:14px !important;font-weight:bold;color:#8a8a84;}
+div.popupBody .action .loaderSmall {margin-right:-30px;}
+div.popupBody .addInfo {position: relative; top: -8px; left: 7px;}
+
+div.newPopup.eventOverridePopup {
+   width: 968px;
+}
+div.newPopup.disciplineContentSelectPopup {
+	width: 768px;
+}
+div.newPopup.disciplineContentSelectPopup  {
+	width: 768px;
+}
+
+
+div.newPopup.disciplineContentSelectPopup .table-list {
+	background-color: #f3f2ef;
+}
+
+div.newPopup.disciplineContentSelectPopup .table-list tbody td {
+	vertical-align: top;
+}
+div.newPopup.disciplineContentSelectPopup .table-list td ul {
+	margin: 0;
+	padding: 0;
+}
+div.newPopup.disciplineContentSelectPopup .table-list td ul li {
+	margin-bottom: 0.5em;
+}
+
+div.newPopup.gray div.popupT {background: url('/img/corner/popup2.png') no-repeat 0 0;}
+div.newPopup.gray div.popupT div {background: url('/img/corner/popup2.png') no-repeat right 0;}
+div.newPopup.gray div.popupT div div {background: #e9e9e9;}
+div.newPopup.gray div.popupB {background: url('/img/corner/popup2.png') no-repeat 0 -9px;}
+div.newPopup.gray div.popupB div {background: url('/img/corner/popup2.png') no-repeat right -9px;}
+div.newPopup.gray div.popupB div div {background: #e9e9e9;}
+div.newPopup.gray div.popupBody  {background: #e9e9e9;}
+
+div.newPopup div.popupBody h1 {color:#1E1E1E;font-size:32px;font-weight:bold;margin-bottom:15px;word-wrap: break-word;margin:0 0 10px;}
+div.newPopup div.popupBody h2 {color:#ED1C3F;font-size:14px;font-weight:bold;line-height:1.2;margin-bottom:10px;word-wrap: break-word;}
+div.newPopup div.popupBody h3 {color:#494948;font-size:14px;font-weight:bold;line-height:1.2;margin-bottom:10px;word-wrap: break-word;}
+div.newPopup div.popupBody label {margin-bottom:5px;}
+div.newPopup div.popupBody div.text {overflow-y:auto;}
+div.newPopup div.popupBody div.textDoubleCopy {color: #8A8A83; line-height: 1.2; font-family: arial,tahoma,sans-serif; font-size: 12px; overflow-y: scroll; text-align: left;}
+div.newPopup div.popupBody div.textDoubleCopy ul li {margin: 1px 1px 1px 20px; list-style-type: decimal;}
+div.newPopup div.popupBody p {color:#8A8A83;font-size:12px;line-height:1.2;margin:10px 0 10px 0;}
+
+/* makes input.text too big
+div.newPopup div.popupBody input.text {padding:6px 7px;}
+*/
+div.newPopup div.popupBody div.availableCourses select {margin-bottom:16px;}
+div.newPopup div.popupBody form {padding:0 2px;}
+
+div.newPopup div.popupBody form#setPassword p {margin:0 0 15px 0;}
+
+div.errorPopup {width: 700px;}
+div.errorPopup div.popupT, div.errorPopup div.popupT div,
+div.errorPopup div.popupB, div.errorPopup div.popupB div {background-image: url('/img/corner/popup-error.png');}
+div.errorPopup div.popupT div div, div.errorPopup div.popupB div div {background: #333333}
+div.errorPopup div.popupBody  {background: #333333 url("/img/error-page-bg.png") no-repeat;}
+div.errorPopup div.popupBody div.text {overflow: auto}
+div.errorPopup div.popupBody h1 {font-weight:bold;font-size:38px; color:#f0f0ec }
+div.errorPopup div.popupBody h2 {font-weight:bold;font-size:24px; color:#ed1c3f}
+div.errorPopup div.popupBody div.footer {margin:0;}
+div.errorPopup div.popupBody div.footer .logo { background: #c6c2b8;width: 235px;height: 47px;
+                                              	padding:10px;float:right; margin-left:140px;}
+
+
+div.fullScreen {width:1000px;}
+div.fullScreen td.popupCC {height:600px;}
+div.fullScreen td.popupCC div.text {height:465px;}
+
+div.smallScreen {width:685px;left:50%;margin-left:-340px;display:none;}
+div.smallScreen td.popupCC {height:235px;}
+div.smallScreen td.popupCC div.text {height:105px;}
+
+#detailsPopup a {font-size:10px; text-decoration:none;color:#ED1C3F;}
+#detailsPopup a:hover {color:#515050;}
+
+#widgetPopup {width:565px;}
+div.widgetBody {overflow: auto; max-height: 516px !important;min-height: 365px}
+#widgetPopup textarea {height: 335px;padding:10px;width: 200px;border:1px solid #D4D3D2; overflow: auto;}
+.widgetIframeBody {vertical-align: top;padding-bottom: 10px;}
+
+.fsLoader {position:absolute;z-index:1500;}
+/*END*/
+
+
+#reminderIvitePopup {width:657px;}
+#reminderIvitePopup input {margin-bottom:0;}
+#reminderIvitePopup a {color:#ED1C3F;font-size:11px;}
+#reminderIvitePopup a:hover {cursor:pointer;}
+
+#invitePopup {width:657px;}
+#invitePopup input {padding:3px 6px;}
+#invitePopup a:not(.ui-autocomplete li a) {color:#ED1C3F;font-size:11px;}
+#invitePopup a:hover {cursor:pointer;}
+#invitePopup .popupCrop {position:relative;overflow: visible;}
+#invitePopup .inviteFields {margin-bottom:10px;}
+#invitePopup div.text {overflow:visible}
+#invitePopup div.descr p {margin-top:0;}
+#invitePopup div#contactGroupsList {margin-bottom:10px;max-height:200px;overflow-y:auto}
+#invitePopup .inviteTypeWarningMsg {margin:0 0 10px 4px;}
+#invitePopup .inviteTypeWarningMsg span {margin-right:4px;}
+#invitePopup .tree-checkbox li a, .tree-checkbox li span.ico {padding:0 !important;}
+#invitePopup .tree-checkbox li a {color:#515050 !important;font-weight:bold;}
+#invitePopup .tree-checkbox li a:hover {color:#ED1C3F !important;}
+#invitePopup .tree-checkbox li a span {height:17px  !important;line-height: 17px;padding:0 !important;}
+#invitePopup .smallNoFieldMessage {margin-bottom:15px}
+#invitePopup .hidden {display: none !important;}
+
+/*POPUP Registration*/
+div.loaderSmall {position:absolute;display:block;margin:-24px 17px 0 0;right:0;}
+div.loaderSmall img {width:20px;display: none;}
+div.loaderMedium {position:absolute;display:block;margin:-35px 12px 0 0;right:0;}
+div.loaderMedium img {width:30px;display: none;}
+
+.underlined {text-decoration:underline;}
+
+#popupLoginContainer .hiddenSubmit {position:relative !important; height:1px !important;}
+#popupLoginContainer #popupLogin .requiredMark {right:40px;}
+#popupLoginContainer div.popupCrop {overflow: visible;}
+#popupLoginContainer td.right div.rPos {position:relative;}
+#popupLoginContainer td.right .loaderSmall {margin: -24px -30px 0 0;}
+#popupLoginContainer .checkbox {display: inline-block;position: relative;z-index: 2;}
+div.enterPass  {width:657px;}
+div.newPopup.enterPass  div.popupBody #popupUsername {margin-bottom:15px;}
+div.enterPass table.action, div.enterPass table.action a, div.enterPass table.action input {vertical-align:middle;font-size:12px;color:#1e1e1e;}
+div.enterPass table.action a#forgotPasswordLink {color: #ed1c3f;margin-left:15px;}
+div.enterPass table.action {margin-top:18px;margin-bottom:-10px;}
+div.newPopup div.textInfo {color:#8A8A83;font-size:12px;line-height:1.2;}
+div.newPopup  div.textInfo a {margin:0px;vertical-align:top;}
+div.enterPass table.action td.right {width:240px;}
+div.enterPass table.action td.right .bt1 a {margin:0px !important;}
+div.enterPass table.action td.right span.btRight {margin-right:0px;}
+div.enterPass table.action div.popupProcessing {position:absolute;display:block;margin:-35px 12px 0 0;right:0;}
+div.enterPass table.action div.popupProcessing img {width:30px;display: none; }
+div.enterPass div.registration {font-size:11px;color:#1e1e1e;margin-top:15px;}
+div.enterPass div.registration a {color: #ed1c3f;}
+
+div.forgotPass  {width:657px;overflow:hidden;}
+div.forgotPass div.popupBody {height:347px;}
+div.forgotPass div.heand {position:absolute;margin:170px 0 0 390px;background: url('/img/heand.png') no-repeat right bottom;height:182px;width:215px;float:right;}
+div.forgotPass p {background:#ebe8e5;font-size:11px; color:#494948;padding:10px;margin:10px 0 18px 0 !important;line-height:1.2;}
+
+div.errorPass {width:657px;}
+div.errorPass h1, div.errorPass p a {color:#ed1c3f;}
+div.errorPass p {font-size:12px;color:#8a8a83;line-height:1.2;}
+
+#popupLoginContainer .AuthType {padding:3px 0 0 5px !important;display:inline-block}
+
+div.loader {width:696px;text-align:center;}
+/*END POPUP Registration*/
+
+div.regConfirm {background: url('/img/regform/confirm.png') no-repeat; width:650px; height:251px;padding:0px 20px 0 20px !important;}
+div.regConfirm div.popupBody  {background:none !important;}
+div.regConfirm .popupBody {padding:10px 20px !important;}
+div.regConfirm .popupT, div.regConfirm .popupB {display:none;}
+div.regConfirm a.close {margin-bottom:0px;float:right;}
+div.regConfirm h1 {font-size:32px;font-weight:bold;color:#1e1e1e;margin-bottom:11px}
+div.regConfirm h2 {color:#ed1c3f;font-size:14px;font-weight:bold;line-height:1.2;margin-bottom:10px;}
+div.regConfirm p {margin:10px 0;line-height:1.2;font-size:12px; color:#8a8a83;width:517px;}
+div.regConfirm p a {color:#ed1c3f;font-weight:bold;}
+div.regConfirm p.smart {font-size:11px; color:#bcbcaf;}
+div.regConfirm p.smart span {font-weight:bold;}
+
+
+div.sendConfirmMail  {width:657px;}
+div.newPopup.sendConfirmMail  h1, div.newPopup.sendConfirmMail p a {color:#ed1c3f !important;}
+div.sendConfirmMail  p {font-size:12px;color:#8a8a83;line-height:1.2;}
+div.sendConfirmMail label {color:#888080;font-weight:bold;font-size:11px}
+div.sendConfirmMail input {margin-top:5px;width:539px !important;}
+
+div.quickRegistration {width:565px;}
+div.quickRegistration span.text {margin-left:0}
+div.quickRegistration table div.popupProcessing {position:absolute;display:inline-block;margin:-30px 0 0 0;right:-35px}
+div.quickRegistration table div.popupProcessing img {width:30px;display: none;}
+div.quickRegistration .quickRegistrationForm td.termsAgree {width:235px;padding-bottom:10px;}
+div.quickRegistration .quickRegistrationForm td.termsAgree label {margin-bottom:0 !important;}
+div.quickRegistration .quickRegistrationForm td.termsAgree a {margin-left:8px;}
+div.quickRegistration .quickRegistrationForm td.termsAgree  .smallNoFieldMessage {display:inline-block;margin-left:21px;}
+div.quickRegistration div#passwordContainer input {margin:0px;}
+div.quickRegistration div#passwordContainer {margin:13px 0;}
+
+div.popupMaterialsList {display:inline-block; text-align:left;}
+div.popupMaterialsList ol li a {color:#ED1C3F;font-size: 1.3em !important; vertical-align:baseline;}
+
+#popupContainer div.addNewContact {width: 582px;}
+#popupContainer div.addNewContact .textInfo {margin-bottom: 10px;}
+#popupContainer div.addNewContact .action {margin-top:15px;}
+#popupContainer div.addNewContact .action .addContactLoader  {position: absolute;right: -30px;top: 4px;width: 20px;}
+#popupContainer div.addNewContact .groupList  {height: 77px; overflow-y: auto; }
+#popupContainer div.addNewContact .groupList label{display:inline-block; padding-top:3px;}
+
+
+div.changePassForm table div.popupProcessing {position:absolute;display:inline;margin:5px 0  0 8px;}
+div.changePassForm table div.popupProcessing img {width:30px;display: none;}
+div.changePassForm p {background:#ebe8e5;font-size:11px; color:#494948;padding:10px;margin-bottom:18px;line-height:1.2;}
+div.changePassForm  div.text {overflow:auto !important;}
+div.changePassForm {width:657px;}
+
+.popupContainer .addContact table td.leftTd {padding-right:5px;width: 237px;}
+div.addCityForm table div.popupProcessing {position:absolute;display:inline;margin:5px 0  0 8px;}
+div.addCityForm table div.popupProcessing img {width:30px;display: none;}
+div.addCityForm p {background:#ebe8e5;font-size:11px; color:#494948;padding:10px;margin-bottom:18px;line-height:1.2;}
+div.addCityForm {width:657px;}
+
+.popupContainer .scrollList {border:1px solid #C3BFBF;padding:10px;width:95%;overflow-y:scroll;max-height:200px;margin:10px 0 20px 0}
+.popupContainer .scrollList dt, .popupContainer .scrollList dd {display:inline-block;padding-bottom:4px;}
+.popupContainer .scrollList dt input {margin-top:0;float:left; margin-right:5px;cursor:pointer;}
+.popupContainer .scrollList dd label {cursor:pointer;}
+
+div.deleteContactsGroupContainer div.scrollList {height:70px;margin:10px 0;}
+.deleteContactsAll label {position:relative;margin-top:4px;display:inline-block;cursor:pointer;}
+
+.popupContainer div.contactGroupsList div.scrollList, .popupContainer div.contactsList div.scrollList {height:70px;margin:10px 0;}
+div.newPopup div.popupBody .contactAdditionalInfo {margin-top: 7px;}
+div.newPopup div.popupBody .autocompleteUsersView {margin-bottom:10px;}
+div.newPopup div.popupBody .autocompleteUsersView .user {margin-top:7px;}
+div.newPopup div.popupBody .contactInfo input.text {padding:6px 5px 4px !important;}
+div.newPopup div.popupBody .contactInfo .textInfo {margin-bottom: 10px;}
+div.newPopup div.popupBody .contactInfo .groupList  {height: 77px; overflow-y: auto; }
+div.newPopup div.popupBody .contactInfo .groupList label{display:inline-block; padding-top:3px;}
+div.newPopup div.popupBody .contactInfo .addContactLoader  {display:none;margin-left:5px;position:absolute;width:27px;}
+div.newPopup div.popupBody .addGroupLoader  {display:none;margin-left:5px;position:absolute;width:27px;}
+div.newPopup div.popupBody .contactInfo div.scrollList {height:70px;}
+.uploadParsedContacts {position:relative;}
+.uploadParsedContacts {width:1000px !important;}
+.uploadParsedContacts #uploadContactLoader {position: absolute;right: -30px;top: 4px;width: 20px;}
+.uploadParsedContacts .dataTableContainer {overflow:auto;width: 896px;max-height:430px;}
+.uploadParsedContacts .actionBtn {text-align:right;margin-top:20px;}
+.uploadParsedContacts .dataTable td {font-size:12px;}
+.dataTableContainer .marginTop {margin-top: 20px;}
+
+.uploadParsedContacts #uploadParsedContacts td input {margin-left:2px;width:159px;}
+.uploadParsedContacts #uploadParsedContacts th select {width:163px;}
+.uploadParsedContacts #uploadParsedContacts td.firstCell input {width:13px;}
+
+.popupContainer .addToGroupsPopup .action .addToGroupLoader {display:none;margin-left:5px;position:absolute;width:27px;}
+.popupContainer .addToGroupsPopup select {margin:5px 0 10px 0;width:200px;}
+.popupContainer .addToGroupsPopup .selectedGroups span {display:block;color:#888080;font-size:11px;font-weight:bold;}
+.popupContainer .addToGroupsPopup .selectedGroups span a {margin-left:5px;}
+.popupContainer .addToGroupsPopup .action .addToGroupLoader {display:none;margin-left:5px;position:absolute;width:27px;}
+.selectedGroups span, .selectedClasses span {color:#888080;display:inline-block;font-size:11px;font-weight:bold;margin-bottom:5px;float:left;margin-right:10px;line-height:10px !important; height: 15px;}
+.selectedGroups span a.ico, .selectedClasses span a.ico {position:relative;margin:-3px 0 0 5px!important;}
+.selectedGroups.single span, .selectedClasses.single span {display:block;float:none;clear:both;}
+.selectedGroups, .selectedClasses {margin-top:7px; max-height: 200px; overflow-y:auto;}
+#availableGroups, #availableClasses {width: 100%;}
+
+
+div.popupBody .action {position:relative;}
+
+.questionDetailsPopup p {margin:3px 0 15px!important;}
+.questionDetailsPopup ul * {color: #8A8A83;font-size: 12px;line-height: 1.2;}
+.questionDetailsPopup .question_Table {border-spacing:3px;margin:5px 0 10px 0;width:100%;}
+.questionDetailsPopup .question_Table td {border:1px solid #888080;padding:3px 5px;}
+.questionDetailsPopup .question_Table p {margin:0 !important;}
+div.questionDetailsPopup div.popupCrop img {max-width: 100%; max-height: 100%}
+div.questionDetailsPopup div.popupCrop td img {max-height: 200px !important;}
+div.questionDetailsPopup div.popupCrop ul {list-style-type:disc;margin:0 0 10px 15px;}
+div.questionDetailsPopup div.popupCrop ol {list-style-type:decimal;margin:0 0 10px 25px;}
+
+#resumeViewFile {width: 1000px;}
+#resumeViewFile div.popupBody {min-height: 500px;}
+#resumeViewFile div.popupBody iframe {min-height: 455px;}
+
+div.inviteFriends {width:657px;}
+div.inviteFriends div.top {margin-bottom:10px}
+div.inviteFriends div.left {width:137px;float:left}
+div.inviteFriends div.right {width:394px;float:right;padding-left:20px;}
+div.inviteFriends input {width:374px !important;margin-top:0px;}
+div.inviteFriends textarea {width:382px;height:104px;margin:0px;border:1px solid #C3BFBF;font-size:12px;padding: 6px 0 0 6px}
+div.inviteFriends div#bodyContainer {margin-bottom:16px;}
+div.inviteFriends div.largeWithFieldControl {width:386px;}
+div.inviteFriends div.right div.action {text-align:right}
+div.inviteFriends div.right img {margin-left:5px;width:27px;display: none;position:absolute;}
+
+div.friendProfilePopup div.popupBody {padding:10px 28px;vertical-align:top;background:#ebe8e5;width:601px;}
+div.friendProfilePopup div.profilePhotoView {background:none;padding:0;}
+
+div.friendProfilePopup {width:657px;overflow:hidden;}
+div.friendProfilePopup div.popupBody #popupCloseBtn {margin:0;right:32px;}
+div.friendProfilePopup h1, div.friendProfilePopup p a {color:#ed1c3f;}
+div.friendProfilePopup p {font-size:12px;color:#8a8a83;line-height:1.2;}
+div.friendProfilePopup td {vertical-align:top}
+div.friendProfilePopup td.left {width:268px;padding-right:25px;}
+div.friendProfilePopup td.left h3 {color:#ed1c3f;font-size:12px;}
+div.friendProfilePopup td.right {padding:5px 0 0 0px;color:#515050;}
+div.friendProfilePopup td.right #detailsText {width:600px;word-wrap:break-word;}
+div.friendProfilePopup td.right h1 {color:#ed1c3f;display:block}
+div.friendProfilePopup td.right div.grayLine {background:#cfcac6;margin-bottom:10px;}
+div.friendProfilePopup td.right label {color:#888080;}
+div.friendProfilePopup td.right dt {padding-bottom:5px;padding-top:10px}
+div.friendProfilePopup td.right dd {font-size:16px;font-weight:bold;padding-bottom:3px;}
+div.friendProfilePopup td.right p {font-size:12px;line-height:1.2;padding-top:10px;}
+div.friendProfilePopup td.right p span {color:#ed1c3f;font-weight:bold;font-size:inherit;}
+div.friendProfilePopup td.right dl.rating dd {color:#ed1c3f;}
+
+/*time zone popup*/
+.popupContainer #timeZoneSettingsEdit {margin-top:15px;}
+.popupContainer #timeZoneSettingsEdit #timeZones {width:100%}
+.popupContainer #timeZoneSettingsEdit #saveTimeZoneLoader {width:25px; margin-left:5px; position:absolute;}
+
+.editSettings #timeZoneSettingsEdit div.saveChanges #saveTimeZoneLoader {width:38px; margin-left:5px; position:absolute;}
+.editSettings #timeZoneSettingsEdit #timeZones {margin-top:10px; width:486px;}
+/*END time zone popup*/
+
+div.newPopup div.popupBody .addHighSchoolLoader  {display:none;margin-left:7px;margin-top:5px;position:absolute;width:27px;}
+
+
+div.userCertifications {width: 800px;}
+div.userCertifications table.dataTable {height: auto;}
+div.userCertifications table.dataTable thead {font-size: 11px;}
+div.userCertifications table.dataTable tbody {font-size: 11px;}
+div.userCertifications table.dataTable tbody a {text-decoration:underline;}
+div.userCertifications div.titleCrop {width: 200px; overflow: hidden;}
+div.userCertifications div.organizationCrop {width: 175px; overflow: hidden;}
+
+div.certificationPopup {width:601px;}
+div.certificationPopup div.grayLine {background:#cfcac6;margin-bottom:10px;}
+div.certificationPopup table.dataTable {height: auto;width:600px;}
+div.certificationPopup table.dataTable thead {font-size: 11px;}
+div.certificationPopup table.dataTable tbody {font-size: 11px;}
+
+div.authorEditorRequestAnswerPopup {width:610px;}
+div.authorEditorRequestAnswerPopup label {font-weight:normal !important;margin-left:3px;margin-top:2px;position: absolute;width: 470px;}
+div.authorEditorRequestAnswerPopup a {color: #ed1c3f;}
+div.authorEditorRequestAnswerPopup a:hover {text-decoration: none;}
+
+div.certificationPopup h1 {color:#ed1c3f !important;}
+div.certificationPopup p {font-size:12px;color:#8a8a83;line-height:1.2;}
+div.certificationPopup td {vertical-align:top}
+div.certificationPopup td.left {padding:0 0 25px 0;}
+div.certificationPopup td.left div {width:265px; overflow:hidden;}
+div.certificationPopup td.left h3 {color:#ed1c3f;font-size:12px;}
+div.certificationPopup td.left dt {margin-bottom:3px;padding-bottom:5px;}
+div.certificationPopup td.left dd label {font-size:16px;}
+div.certificationPopup td.right {padding:0;color:#515050;}
+div.certificationPopup td.right div {width:250px;overflow:hidden;}
+div.certificationPopup td.right h1 {color:#ed1c3f;}
+div.certificationPopup td.right label {color:#888080;}
+div.certificationPopup td.right dl {width:300px !important;}
+div.certificationPopup td.right dt {padding-bottom:5px;}
+div.certificationPopup td.right dd {font-size:16px;font-weight:bold;padding-bottom:10px;}
+div.certificationPopup td.right div.tinyMceOut {width:598px;overflow:hidden;}
+div.certificationPopup td.right div.tinyMceOut {width:598px;overflow:hidden;}
+div.certificationPopup td.right dd label {font-size:16px;}
+div.certificationPopup td.right p {font-size:12px;line-height:1.2;}
+div.certificationPopup div.textInfo p span {color:#ed1c3f;font-weight:bold;font-size:inherit;}
+
+div.popupCrop div.courseDescr {width:500px;margin:auto;}
+
+div.qMarker1Popup div.popupBody, div.qMarker2Popup div.popupBody {padding:10px 28px;vertical-align:top;background:#ebe8e5;width:601px;}
+div.qMarker1Popup #popupCloseBtn {margin:0 ;right:32px;}
+div.qMarker1Popup {width:657px;}
+div.qMarker1Popup h1 {color:#ed1c3f;}
+div.qMarker1Popup p {font-size:12px;color:#8a8a83;line-height:1.2;}
+div.qMarker1Popup td {vertical-align:top}
+div.qMarker1Popup td.left {width:268px;padding-right:25px;}
+div.qMarker1Popup td.left h3 {color:#ed1c3f;font-size:12px;}
+div.qMarker1Popup td.right {color:#515050;}
+div.qMarker1Popup h1 {color:#ed1c3f !important;max-width:600px;overflow:hidden;}
+div.qMarker1Popup td.right div.grayLine {background:#cfcac6;margin-bottom:20px;}
+div.qMarker1Popup td.right label {color:#888080;}
+div.qMarker1Popup td.right dd {font-size:16px;font-weight:bold;padding-bottom:15px;}
+div.qMarker1Popup td.right p {font-size:12px;line-height:1.2;}
+div.qMarker1Popup td.right p span.titleSection {color:#ed1c3f;font-weight:bold;font-size:inherit;float: left;}
+div.qMarker1Popup td.right dt {margin-bottom: 3px;}
+
+div.qMarker2Popup {width:657px;}
+div.qMarker2Popup #popupCloseBtn {margin:0 ;right:32px;}
+div.qMarker2Popup h1 {color:#ed1c3f;max-width:600px;overflow:hidden;}
+div.qMarker2Popup p {font-size:12px;color:#8a8a83;line-height:1.2;}
+div.qMarker2Popup td {vertical-align:top}
+div.qMarker2Popup td.left {width:268px;padding-right:25px;}
+div.qMarker2Popup td.left h3 {color:#ed1c3f;font-size:12px;}
+div.qMarker2Popup td.left label {color:#888080;}
+div.qMarker2Popup td.left dd {font-size:16px;font-weight:bold;padding-bottom:15px;}
+div.qMarker2Popup td.left p {font-size:12px;line-height:1.2;}
+div.qMarker2Popup td.right {color:#515050;}
+div.qMarker2Popup td.right h1 {color:#ed1c3f;max-width:600px;overflow:hidden;}
+div.qMarker2Popup td.right div.grayLine {background:#cfcac6;margin-bottom:20px;max-width:600px;overflow:hidden;}
+div.qMarker2Popup td.right label {color:#888080;}
+div.qMarker2Popup td.right dl {width:600px;overflow:hidden;}
+div.qMarker2Popup td.right dd {font-size:16px;font-weight:bold;padding-bottom:15px;}
+div.qMarker2Popup td.right p {font-size:12px;line-height:1.2;}
+
+div.qMarker2Popup td.right dt {margin-bottom: 3px;}
+
+div.materialsPopup {width:615px;}
+div.materialsPopup div.popupBody {padding:10px 35px;}
+div.materialsPopup div.popupBody div.scrollOn {max-height:500px; overflow-y:scroll;}
+div.materialsPopup div.popupBody th {font-size:11px; font-weight:bold;}
+div.materialsPopup div.popupBody td {font-size:11px;}
+div.materialsPopup div.popupBody h2.title {color: #D11438;font-size: 12px;font-weight: bold;margin-bottom: 10px;}
+div.materialsPopup div.popupBody  div.noNewInfo {margin:10px 0;padding:10px;text-align:center;border:2px solid #EBE8E5;}
+div.materialsPopup div.popupBody  div.noNewInfo label {color:#333333;font-size:11px;line-height:1.2;font-weight:normal;margin:0px;}
+
+div.copymoveConfirm, div.deleteStatisticsConfirm, div.packageWithStudent {width:615px;}
+#copymoveConfirm .action {margin: 10px auto;}
+
+div.feedbackPopup div.author a.userName span {background-position:0 -166px;}
+
+div.moderationPopup {padding:10px 28px;vertical-align:top;width:601px;}
+div.moderationPopup #popupCloseBtn {margin:0 ;}
+
+div.moderationPopup {width:657px;}
+div.moderationPopup h1 {color:#ed1c3f;}
+div.moderationPopup p {font-size:12px;color:#8a8a83;line-height:1.2;}
+div.moderationPopup td {vertical-align:top}
+div.moderationPopup td.left {width:268px;padding-right:25px;}
+div.moderationPopup td.left h3 {color:#ed1c3f;font-size:12px;}
+div.moderationPopup td.right {color:#515050;}
+div.moderationPopup h1 {color:#ed1c3f !important;}
+div.moderationPopup td.right div.grayLine {background:#cfcac6;margin-bottom:20px;}
+div.moderationPopup td.right label {color:#888080;}
+div.moderationPopup td.right dd {font-size:16px;font-weight:bold;padding-bottom:15px;}
+div.moderationPopup td.right p {font-size:12px;line-height:1.2;}
+div.moderationPopup td.right p span.titleSection {color:#ed1c3f;font-weight:bold;font-size:inherit;float: left;}
+div.moderationPopup td.right dt {margin-bottom: 3px;}
+
+.viewItemFileContent {position:absolute;z-index:300;width:1050px !important;}
+.viewItemFileContent .popupBody {padding:10px 25px !important;}
+.viewItemFileContent .popupBody #popupCloseBtn {margin-right:0;right:32px;}
+.viewItemFileContent iframe {height:700px;width:998px;margin:0 auto;border:1px solid #D4D3D2;}
+
+div.editItemPopup {width: 800px;}
+
+div.popupBody #popupCloseBtn {margin-bottom:5px;}
+div.courseVideoPreview {position:absolute;z-index:300;}
+div.courseVideoPreview {width:750px;}
+div.courseVideoPreview iframe {width:640px; height:510px;}
+
+div.recordVideoPopup {width:750px;}
+div.recordVideoPopup div.popupCrop {padding-bottom: 50px;}
+.recordVideoPopup #flashRecorder {width:640px;margin:0 auto;}
+.recordVideoPopup .popupBody {position:relative;}
+.recordVideoPopup .action {position:relative;bottom:-20px;right:0;display:inline-block;}
+.recordVideoPopup .action.rPos {float:right;}
+.recordVideoPopup .action div.loaderSmall {margin: -24px -24px 0 0;}
+.recordVideoPopup input.textBig {width: 627px;margin-bottom: 16px;}
+.recordVideoPopup .popupMaterialTitleBox {height: 70px;}
+.recordVideoPopup div.smallNoFieldMessage {width: 628px; margin: 5px auto;}
+
+/*courses and meeting invitation popup*/
+#inviteUsersToCourse #availableFriends, #inviteUsersToMeeting #availableFriends {width:220px;}
+#inviteUsersToCourse #selectedFriendsContainer, #inviteUsersToMeeting #selectedFriendsContainer {margin-bottom:10px;}
+#error_container_inviteUsersToMeeting_availableFriends, #error_container_inviteUsersToCourse_availableFriends {margin: 0px 0 5px;}
+#inviteUsersToCourse #asStudent, #inviteUsersToCourse #asTestUser {margin:-2px 0 0 10px;}
+#invitePopup #inviteUsersSmartCounter {position:absolute;margin-top:-5px;}
+#invitePopup #inviteUsersSmartCounter .authLoader {width:15px;}
+
+/*NEW POPUP*/
+div.fullScreen {width:1000px;}
+div.fullScreen .popupBody {height:600px;padding:10px 30px !important;}
+div.fullScreen .popupBody #popupCloseBtn {margin:0;right:32px;}
+div.fullScreen .popupBody div.text {height:495px;}
+
+div.smallScreen {width:685px;left:0;margin-left:0;display:block;}
+div.smallScreen .popupBody {height:235px;}
+div.smallScreen .popupBody div.text {height:105px;}
+
+#detailsPopup a {font-size:10px; text-decoration:none;color:#ED1C3F;}
+#detailsPopup a:hover {color:#515050;}
+
+/*DECLINE BLOG POST POPUP*/
+div.declineBlogPost  {width:657px;}
+div.newPopup.declineBlogPost  h1, div.newPopup.declineBlogPost p a {color:#ed1c3f !important;}
+div.declineBlogPost  p {font-size:12px;color:#8a8a83;line-height:1.2;}
+div.declineBlogPost label {color:#888080;font-weight:bold;font-size:11px}
+div.declineBlogPost input {margin-top:5px;width:537px !important;}
+
+div.declineBlogPost div.popupProcessing {position:absolute;display:inline;margin:4px 0  0 8px;}
+div.declineBlogPost div.popupProcessing img {width:30px;display: none;}
+
+#popupContainer .transitionData p {margin: 4px 0;}
+#popupContainer .transitionData p.userInfo {float:left;}
+#popupContainer .transitionData div.userInfo {float:left;position:relative; margin-left: 5px; margin-top: 0px;}
+
+div#adminGroupAddUsersPopup {width:600px;}
+div#adminEditVideoPopup #error_container_uploadVideos_fileName.largeWithFieldMessage {margin:32px 0 5px;}
+
+/*import contacts popup1*/
+div.importContactsPopup {width:657px;}
+div.importContactsPopup label {display:inline-block;}
+div.importContactsPopup #uploadContacts {padding:0;}
+div.importContactsPopup #uploadContacts .checkboxInput {margin: 15px auto 14px;}
+div.importContactsPopup #uploadContacts .groupNameContainer {margin: 14px auto 15px;}
+div.importContactsPopup #uploadContacts .formFieldBox {width: auto;}
+#editContact #availableGroups {margin-top: 5px;}
+
+div.importContactsPopup div.top {margin-bottom:10px}
+div.importContactsPopup div.left {width:137px;float:left}
+div.importContactsPopup div.right {width:394px;float:right;padding-left:20px;}
+div.importContactsPopup div#bodyContainer {margin-bottom:16px;}
+div.importContactsPopup .rPos {position:relative}
+div.importContactsPopup div.popupCrop {overflow:visible;}
+div.importContactsPopup #fileName {padding:3px 6px !important;}
+div.importContactsPopup #uploadContactLoader {position:absolute;right:-30px;top:4px;width:20px;}
+div.importContactsPopup #group {margin-top:0;margin-left:0;vertical-align:middle;}
+div.importContactsPopup .inlineElement {vertical-align:middle;}
+div.importContactsPopup #groupSelect {max-width:217px;}
+div.importContactsPopup #groupName {width:212px;}
+div.importContactsPopup #newGroup input {border:1px solid #C3BFBF;vertical-align:middle;}
+div.importContactsPopup #newGroup a {vertical-align:middle;}
+
+.popupContainer div.openIdService {margin:0 0 10px 0;}
+
+#programCoursesPopup .programCoursesDetails {margin-bottom: 5px;}
+
+div.sendMessageToAuthorPopup {width: 630px;}
+div.sendMessageToAuthorPopup div.largeWithFieldMessage {margin:0px 0 5px 0;}
+div.sendMessageToAuthorPopup #sendMessageLoader {position:absolute;margin:0px 0 0 14px;width:25px ;height:25px;}
+div.sendMessageToAuthorPopup #message {width:520px ;height:230px;}
+
+div.extendedEventPopup {width:670px;}
+div#extendedEventPopup div.popupEventTitle {overflow-x: hidden}
+div#extendedEventPopup div.popupEventDescription {overflow-x: hidden}
+div#extendedEventPopup div#invitationsCounter {overflow-y:none;}
+
+div.questionDetailsPopup div.actions {margin-top: -25px; position: relative;float: right; width: 266px;}
+
+.addQuestionPopup {width: 675px !important;}
+.addQuestionPopup .answerTextEntryInput {margin-top: 10px;}
+.addQuestionPopup #choiceQuestionType textarea, .addQuestionPopup #choiceMultipleQuestionType textarea {width: 450px; height: 205px;}
+.addQuestionPopup #orderQuestionType textarea {width: 539px; height: 205px;}
+.addQuestionPopup .questionBlock .formFieldArea .formFieldBox {width: 100%;}
+.addQuestionPopup #addAnswerChoice, .addQuestionPopup #addAnswerChoiceMultiple, .addQuestionPopup #addAnswerOrder, .addQuestionPopup #addAnswerMatch {margin-left: 21px;}
+.addQuestionPopup #questionWeightErrorContainer {margin-left: 77px; margin-top: -28px; position: absolute;}
+form#responseToEditorRequest .popupButtonContainer {margin-top: 10px;}
+
+#editStudentRewardPopup {width: 668px;}
+#editStudentRewardPopup .maxUserReward {margin-bottom: 10px;}
+#editStudentRewardPopup #editCourseUserReward #reward {font-size: 16px; padding: 3px 5px;}
+#editStudentRewardPopup .formFieldArea .formFieldBox {width: 561px;}
+#editStudentRewardPopup .textareaInput {width: 561px;}
+#editStudentRewardPopup #rewardErrorContainerId, #editStudetnRewardPopup #studentsErrorContainer {margin-bottom: 10px;}
+
+#editMaterialScorePopup {width: 668px;}
+#editMaterialScorePopup .maxAuthorScore {margin-bottom: 10px;padding:0 2px;}
+#editMaterialScorePopup #editAuthorScore #authorScore {font-size: 16px; padding: 3px 5px;}
+#editMaterialScorePopup .formFieldArea .formFieldBox {width: 561px;}
+#editMaterialScorePopup .textareaInput {width: 561px;}
+#editMaterialScorePopup #authorScoreErrorContainerId {margin-bottom: 10px;}
+
+#popupCloseBtn.buttonCloseAuthorsFromEpos {position: static;}
+
+form#userDataUpdate #passwordContainer .formField {margin-bottom: 5px;}
+form#userDataUpdate .text, form#userDataUpdate label {font-size: 15px; color: #1E1E1E; margin-bottom: 5px;}
+form#userDataUpdate .text {margin: 5px 0 10px; overflow-y: hidden;}
+form#userDataUpdate .formFieldArea {margin-bottom: 5px;}
+div#updateUserData .popupBody div.largeWithFieldMessage {margin: -5px 0 5px;}
+
+
+/* dvylegzhanin: make confirmBlock upper than regular popup (have inline style) */
+div#confirmBlock {
+	z-index: 1300 !important;
+}
+
+div#confirmBlockShadow {
+	z-index: 1299;
+}
+
+#alertBlock h1 { margin: 0; }
