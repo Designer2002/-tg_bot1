@@ -1,8 +1,7 @@
 from collections.abc import Iterable
 from datetime import datetime
-
-import dateutil.parser
 from bs4 import BeautifulSoup
+
 html = "rasp.html"
 with open(html, 'r') as f:
     webpage = f.read()
