@@ -4,9 +4,7 @@ from telebot import TeleBot, types
 
 import table_parser
 
-API_TOKEN = '8090665949:AAHgPiMP8WP-jmXfBr3nCo2cNfkTmc1czjk'  # Замените на ваш токен
 bot = TeleBot(API_TOKEN)
-#bot = telebot.TeleBot('7355082915:AAG0C6xkBF99MX3KCjzPTziy1Xjk2uWkRpE')
 
 
 @bot.message_handler(commands=['start'])
