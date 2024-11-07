@@ -42,22 +42,8 @@ def get_schedule_gen(timerange):
         if date not in schedule:
             schedule[date] = []
         schedule[date].append(entry)
-    wanted_keys = None
 
-    if isinstance(timerange, Iterable):
         wanted_keys = timerange
-        for date in wanted_keys:
-            if date in schedule:  # Проверяем, есть ли дата в расписании
-                lessons = schedule[date]
-                if lessons:  # Проверяем, есть ли уроки для этой даты
-                    yield (f"{date}:")
-                    for lesson in lessons:
-                        yield (lesson[1], lesson[2], lesson[3], lesson[4], lesson[5])
-                else:
-                    yield (f"{date}: Нет уроков.")
-    else:
-
-        wanted_keys = timerange.strftime('%d.%m.%y') # Оборачиваем число в список
         if wanted_keys in schedule:  # Проверяем, есть ли дата в расписании
             lessons = schedule[wanted_keys]
             if lessons:  # Проверяем, есть ли уроки для этой даты
@@ -70,18 +56,49 @@ def get_schedule_gen(timerange):
 
 def get_schedule(timerange):
     d = []
-    for data in get_schedule_gen(timerange):
-        d.append(data)
-    schedule = d
-    """Форматирует расписание в красивое сообщение."""
-    message = "Расписание на {}:\n".format(schedule[0])
-    message+=(f"Время: {schedule[1]}")
-    message+=(f"Предмет: {schedule[2]}")
-    message+=(f"Место проведения: {schedule[3]}")
-    message+=(f"Тип занятия: {schedule[4]}")
-    if len(schedule) > 5: 
-        message+=(f"Преподаватель: {schedule[5]}")
-    message+=("-" * 20)
+    message = ""
+    if isinstance(timerange, Iterable) and not isinstance(timerange, str):
+        for t in timerange:
+            for data in get_schedule_gen(t):
+                d.append(data)
+            schedule = d
+            """Форматирует расписание в красивое сообщение."""
+            message += "Расписание на {}:\n".format(schedule[0])
+            message += "\n"
+            message+=(f"Время: {schedule[1][0].replace(" ", "")}")
+            message += "\n"
+            message+=(f"Предмет: {schedule[1][1]}")
+            message += "\n"
+            message+=(f"Место проведения: {schedule[1][2]}")
+            message += "\n"
+            if len(schedule[1]) > 3: 
+                message+=(f"Тип занятия: {schedule[1][3]}")
+                message += "\n"
+            if len(schedule[1]) > 4: 
+                message+=(f"Преподаватель: {schedule[1][4]}")
+                message += "\n"
+            message+=("-" * 20)
+    else:
+        for data in get_schedule_gen(timerange):
+            d.append(data)
+        schedule = d
+        """Форматирует расписание в красивое сообщение."""
+        message += "Расписание на {}:\n".format(schedule[0])
+        message += "\n"
+        message+=(f"Время: {schedule[1][0].replace(" ", "")}")
+        message += "\n"
+        message+=(f"Предмет: {schedule[1][1]}")
+        message += "\n"
+        message+=(f"Место проведения: {schedule[1][2]}")
+        message += "\n"
+        if len(schedule[1]) > 3: 
+            message+=(f"Тип занятия: {schedule[1][3]}")
+            message += "\n"
+        if len(schedule[1]) > 4: 
+            message+=(f"Преподаватель: {schedule[1][4]}")
+            message += "\n"
+        message+=("-" * 20)
 
     return message
+
 
