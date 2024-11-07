@@ -3,7 +3,8 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 
 html = "rasp.html"
-with open(html, 'r') as f:
+import io
+with io.open(html, encoding='utf-8') as f:
     webpage = f.read()
 
 soup = BeautifulSoup(webpage, features="html.parser")
@@ -34,7 +35,7 @@ def get_table():
 
 # Вывод результатов
 
-def get_schedule(timerange):
+def get_schedule_gen(timerange):
     schedule = {}
     for entry in get_table():
         date = entry[0]
@@ -45,16 +46,34 @@ def get_schedule(timerange):
 
     if isinstance(timerange, Iterable):
         wanted_keys = timerange
+        for date in wanted_keys:
+            if date in schedule:  # Проверяем, есть ли дата в расписании
+                lessons = schedule[date]
+                if lessons:  # Проверяем, есть ли уроки для этой даты
+                    yield (f"{date}:")
+                    for lesson in lessons:
+                        yield (lesson[1], lesson[2], lesson[3], lesson[4], lesson[5])
+                else:
+                    yield (f"{date}: Нет уроков.")
     else:
-        # Assuming timerange is a single date string in DD.MM.YY format
-        wanted_keys = [timerange]
 
-    for date in wanted_keys:
-        if date in schedule:  # Проверяем, есть ли дата в расписании
-            lessons = schedule[date]
+        wanted_keys = timerange.strftime('%d.%m.%y') # Оборачиваем число в список
+        if wanted_keys in schedule:  # Проверяем, есть ли дата в расписании
+            lessons = schedule[wanted_keys]
             if lessons:  # Проверяем, есть ли уроки для этой даты
-                yield (f"{date}:")
+                yield (f"{wanted_keys}:")
                 for lesson in lessons:
                     yield (lesson[1], lesson[2], lesson[3], lesson[4], lesson[5])
             else:
-                yield (f"{date}: Нет уроков.")
+                yield (f"{wanted_keys}: Нет уроков.")
+    
+
+def get_schedule(timerange):
+    d = []
+    for data in get_schedule_gen(timerange):
+        d.append(data)
+    return d
+
+print()
+print("123")
+print(get_schedule(datetime.today()))
