@@ -1,5 +1,4 @@
 from collections.abc import Iterable
-from datetime import datetime
 from bs4 import BeautifulSoup
 
 html = "rasp.html"
@@ -73,7 +72,3 @@ def get_schedule(timerange):
     for data in get_schedule_gen(timerange):
         d.append(data)
     return d
-
-print()
-print("123")
-print(get_schedule(datetime.today()))
