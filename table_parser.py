@@ -71,4 +71,12 @@ def get_schedule(timerange):
     d = []
     for data in get_schedule_gen(timerange):
         d.append(data)
-    return d
+    schedule = d
+    """Форматирует расписание в красивое сообщение."""
+    message = "Расписание на {}:\n".format(schedule[0])
+
+    for item in schedule[1:]:
+        time, subject, room, type, teacher = item
+        message += f"{time} - {subject} ({room}) - {type} ({teacher})\n"
+
+    return message

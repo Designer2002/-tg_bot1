@@ -22,14 +22,14 @@ def send_welcome(message):
 
 
 def rest_of_week():
-    tw = datetime.today().weekday() + 1
+    tw = datetime.date.today().weekday() + 1
     if tw>5:
         return "Адихай брад((("
     else:
         data = []
         for i in range(6-tw):
             print(i)
-            data.append((datetime.today()+datetime.timedelta(days=i)).strftime('%d.%m.%y'))
+            data.append((datetime.date.today()+datetime.timedelta(days=i)).strftime('%d.%m.%y'))
         return data
 
 
