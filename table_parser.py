@@ -1,4 +1,5 @@
 from collections.abc import Iterable
+import datetime
 from bs4 import BeautifulSoup
 
 html = "rasp.html"
@@ -74,9 +75,13 @@ def get_schedule(timerange):
     schedule = d
     """Форматирует расписание в красивое сообщение."""
     message = "Расписание на {}:\n".format(schedule[0])
-
-    for item in schedule[1:]:
-        time, subject, room, type, teacher = item
-        message += f"{time} - {subject} ({room}) - {type} ({teacher})\n"
+    message+=(f"Время: {schedule[1]}")
+    message+=(f"Предмет: {schedule[2]}")
+    message+=(f"Место проведения: {schedule[3]}")
+    message+=(f"Тип занятия: {schedule[4]}")
+    if len(schedule) > 5: 
+        message+=(f"Преподаватель: {schedule[5]}")
+    message+=("-" * 20)
 
     return message
+
