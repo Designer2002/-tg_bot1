@@ -80,7 +80,9 @@ def get_schedule(timerange):
             message+=("-" * 20)
     else:
         
-        schedule = get_schedule_gen(timerange)
+        for data in get_schedule_gen(timerange.strftime('%d.%m.%y')):
+            d.append(data)
+        schedule = d
         """Форматирует расписание в красивое сообщение."""
         message += "Расписание на {}:\n".format(schedule[0])
         message += "\n"
@@ -99,5 +101,3 @@ def get_schedule(timerange):
         message+=("-" * 20)
 
     return message
-
-
