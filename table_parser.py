@@ -1,3 +1,4 @@
+
 from collections.abc import Iterable
 import datetime
 from bs4 import BeautifulSoup
@@ -24,17 +25,17 @@ def get_table():
             # Ищем ячейки с информацией
             cells = row.find_all('td')
             if cells:
-                f1 = cells[0].text.strip()  # Аудитория
-                f2 = cells[1].text.strip()  # Преподаватель
-                f3 = cells[2].text.strip()  # Аудитория
-                f4 = cells[3].text.strip()  # Преподаватель
-                f5 = cells[4].text.strip()  # Аудитория
-                yield current_day, f1, f2, f3, f4, f5
-
+                # Обработка разных типов строк
+                f1 = cells[0].text.strip() if len(cells) > 0 else None  # Время
+                f2 = cells[1].text.strip() if len(cells) > 1 else None  # Предмет
+                f3 = cells[2].text.strip() if len(cells) > 2 else None  # Место проведения
+                f4 = cells[3].text.strip() if len(cells) > 3 else None  # Тип занятия
+                f5 = cells[4].text.strip() if len(cells) > 4 else None  # Преподаватель
+                f6 = cells[5].text.strip() if len(cells) > 5 else None  # Дополнительная информация
+                yield current_day, f1, f2, f3, f4, f5, f6
 
 
 # Вывод результатов
-
 def get_schedule_gen(timerange):
     schedule = {}
     for entry in get_table():
@@ -43,61 +44,76 @@ def get_schedule_gen(timerange):
             schedule[date] = []
         schedule[date].append(entry)
 
-        wanted_keys = timerange
-        if wanted_keys in schedule:  # Проверяем, есть ли дата в расписании
-            lessons = schedule[wanted_keys]
-            if lessons:  # Проверяем, есть ли уроки для этой даты
-                yield (f"{wanted_keys}:")
-                for lesson in lessons:
-                    yield (lesson[1], lesson[2], lesson[3], lesson[4], lesson[5])
-            else:
-                yield (f"{wanted_keys}: Нет уроков.")
+    if timerange in schedule:  # Проверяем, есть ли дата в расписании
+        lessons = schedule[timerange]
+        if lessons:  # Проверяем, есть ли уроки для этой даты
+            return lessons
+        else:
+            return (f"{timerange}: Нет уроков.")
+    else:
+        return (f"{timerange}: Нет уроков.")
     
-
+    
 def get_schedule(timerange):
-    d = []
     message = ""
     if isinstance(timerange, Iterable) and not isinstance(timerange, str):
         for t in timerange:
-            for data in get_schedule_gen(t):
-                d.append(data)
-            schedule = d
-            """Форматирует расписание в красивое сообщение."""
-            message += "Расписание на {}:\n".format(schedule[0])
-            message += "\n"
-            message += f"Время: {schedule[1][0]}"
-            message += "\n"
-            message+=f"Предмет: {schedule[1][1]}"
-            message += "\n"
-            message+=f"Место проведения: {schedule[1][2]}"
-            message += "\n"
-            if len(schedule[1]) > 3: 
-                message+=f"Тип занятия: {schedule[1][3]}"
-                message += "\n"
-            if len(schedule[1]) > 4: 
-                message+=f"Преподаватель: {schedule[1][4]}"
-                message += "\n"
-            message+=("-" * 20)
+            schedule = get_schedule_gen(t)
+            if schedule:
+                for i, lesson in enumerate(schedule):
+                    date = lesson[0]
+                    time = lesson[1]
+                    subject = lesson[2]
+                    location = lesson[3]
+                    lesson_type = lesson[4]
+                    teacher = lesson[5]
+                    additional_info = lesson[6]
+
+                    if i == 0:  # Выводим заголовок только для первого урока
+                        message += "Расписание на {}:\n".format(date)
+                        message += "\n"
+
+                    message += f"Время: {time}\n"
+                    message += f"Предмет: {subject}\n"
+                    message += f"Место проведения: {location}\n"
+                    if lesson_type:
+                        message += f"Тип занятия: {lesson_type}\n"
+                    if teacher:
+                        message += f"Преподаватель: {teacher}\n"
+                    if additional_info:
+                        message += f"Дополнительная информация: {additional_info}\n"
+                    message += ("-" * 20) + "\n"
+            else:
+                message += schedule  # Выводим сообщение о том, что уроков нет
+
     else:
-        
-        for data in get_schedule_gen(timerange.strftime('%d.%m.%y')):
-            d.append(data)
-        schedule = d
-        """Форматирует расписание в красивое сообщение."""
-        message += "Расписание на {}:\n".format(schedule[0])
-        message += "\n"
-        message+=f"Время: {schedule[1][0]}"
-        message += "\n"
-        message+=f"Предмет: {schedule[1][1]}"
-        message += "\n"
-        message+=f"Место проведения: {schedule[1][2]}"
-        message += "\n"
-        if len(schedule[1]) > 3: 
-            message+=f"Тип занятия: {schedule[1][3]}"
-            message += "\n"
-        if len(schedule[1]) > 4: 
-            message+=f"Преподаватель: {schedule[1][4]}"
-            message += "\n"
-        message+=("-" * 20)
+        schedule = get_schedule_gen(timerange.strftime('%d.%m.%y'))
+        if schedule:
+            for i, lesson in enumerate(schedule):
+                date = lesson[0]
+                time = lesson[1]
+                subject = lesson[2]
+                location = lesson[3]
+                lesson_type = lesson[4]
+                teacher = lesson[5]
+                additional_info = lesson[6]
+
+                if i == 0:  # Выводим заголовок только для первого урока
+                    message += "Расписание на {}:\n".format(date)
+                    message += "\n"
+
+                message += f"Время: {time}\n"
+                message += f"Предмет: {subject}\n"
+                message += f"Место проведения: {location}\n"
+                if lesson_type:
+                    message += f"Тип занятия: {lesson_type}\n"
+                if teacher:
+                    message += f"Преподаватель: {teacher}\n"
+                if additional_info:
+                    message += f"Дополнительная информация: {additional_info}\n"
+                message += ("-" * 20) + "\n"
+        else:
+            message += schedule  # Выводим сообщение о том, что уроков нет
 
     return message
+
