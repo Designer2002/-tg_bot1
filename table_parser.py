@@ -85,17 +85,17 @@ def get_schedule(timerange):
         """Форматирует расписание в красивое сообщение."""
         message += "Расписание на {}:\n".format(schedule[0])
         message += "\n"
-        message+=(f"Время: {schedule[1][0].replace(" ", "")}")
+        message+=f"Время: {schedule[1][0].replace(" ", "")}"
         message += "\n"
-        message+=(f"Предмет: {schedule[1][1]}")
+        message+=f"Предмет: {schedule[1][1]}"
         message += "\n"
-        message+=(f"Место проведения: {schedule[1][2]}")
+        message+=f"Место проведения: {schedule[1][2]}"
         message += "\n"
         if len(schedule[1]) > 3: 
-            message+=(f"Тип занятия: {schedule[1][3]}")
+            message+=f"Тип занятия: {schedule[1][3]}"
             message += "\n"
         if len(schedule[1]) > 4: 
-            message+=(f"Преподаватель: {schedule[1][4]}")
+            message+=f"Преподаватель: {schedule[1][4]}"
             message += "\n"
         message+=("-" * 20)
 
