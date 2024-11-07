@@ -1,11 +1,12 @@
 import datetime
+import os
 
 from telebot import TeleBot, types
 
 import table_parser
 
-
-bot = TeleBot(API_TOKEN)
+bot_token = os.getenv('API_TOKEN')
+bot = TeleBot(bot_token)
 
 
 @bot.message_handler(commands=['start'])
