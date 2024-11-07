@@ -8,7 +8,7 @@ with open(html, 'r') as f:
 
 soup = BeautifulSoup(webpage, features="html.parser")
 
-# First, select the desried table element (the 2nd one on the page)
+# First, select the desired table element (the 2nd one on the page)
 table = soup.find('table', {'class': 'table-list v-scrollable'})
 current_day = ""
 
@@ -46,9 +46,9 @@ def get_schedule(timerange):
     if isinstance(timerange, Iterable):
         wanted_keys = timerange
     else:
+        # Assuming timerange is a single date string in DD.MM.YY format
+        wanted_keys = [timerange]
 
-        wanted_keys = [datetime.strptime(date, '%Y-%m-%d').strftime('%d.%m.%y') for date in timerange] # Оборачиваем число в список
-        print(wanted_keys)
     for date in wanted_keys:
         if date in schedule:  # Проверяем, есть ли дата в расписании
             lessons = schedule[date]
@@ -58,5 +58,3 @@ def get_schedule(timerange):
                     yield (lesson[1], lesson[2], lesson[3], lesson[4], lesson[5])
             else:
                 yield (f"{date}: Нет уроков.")
-
-
